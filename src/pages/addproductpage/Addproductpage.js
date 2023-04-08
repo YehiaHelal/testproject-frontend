@@ -54,7 +54,7 @@ export default function AddproductPage() {
       <div className="Add-product-page-container">
         <div>
           <Form
-            id="product_form"
+            id="#product_form"
             className="form-component"
             method="post"
             action="/addproduct"
