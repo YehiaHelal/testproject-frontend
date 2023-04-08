@@ -52,13 +52,8 @@ export default function AddproductPage() {
         <NavLink to="/">CANCEL</NavLink>
       </div> */}
       <div className="Add-product-page-container">
-        <div>
-          <Form
-            id="#product_form"
-            className="form-component"
-            method="post"
-            action="/addproduct"
-          >
+        <div id="#product_form">
+          <Form className="form-component" method="post" action="/addproduct">
             <span>SKU</span>
             <input
               type="text"
