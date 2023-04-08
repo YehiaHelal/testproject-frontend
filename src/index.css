@@ -1,0 +1,186 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap");
+
+/* Main */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+/* Nav Bar  */
+
+.Nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px rgb(160, 149, 149, 0.3);
+}
+
+.Nav-ADD-Product-button {
+  padding: 7px;
+  margin: 10px;
+
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  border: solid 2px black;
+  color: black;
+}
+
+.Nav-MassDelete-Button {
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 15px;
+  border: solid 2px black;
+  color: white;
+  background-color: rgb(255, 0, 0, 0.6);
+}
+
+.Nav-Save-Button {
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 15px;
+  border: solid 2px black;
+  color: white;
+  background-color: white;
+}
+
+.Nav-MassDelete-Button:hover {
+  cursor: pointer;
+}
+
+/* List Product Home page styles */
+
+.Home-product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 1400px;
+
+  margin: 0 auto;
+}
+
+.each-product-box-style {
+  border-radius: 4px;
+  margin: 20px 20px;
+  padding: 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.each-product-box-style > * {
+  margin: 2px 2px;
+  /* margin-bottom: 0; */
+}
+
+.delete-button-each-item-select {
+  padding: 4px;
+  align-self: start;
+}
+.delete-button-each-item-select:hover {
+  cursor: pointer;
+}
+
+/* Add Product Page  */
+
+.Add-product-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Form styles */
+
+.form-component {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: baseline;
+}
+
+.form-Save-button {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form-drop-down-style {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  box-sizing: border-box;
+  justify-self: end;
+}
+
+.drop-down-more-details-fields-containers,
+.drop-down-more-details-fields-elements-text-span {
+  grid-column: span 2;
+}
+
+.drop-down-more-details-fields-elements {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: baseline;
+}
+
+.drop-down-more-details-fields-elements-text-span {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.drop-down-more-details-fields-elements-input {
+  width: 80%;
+  justify-self: end;
+}
+
+/* Form General Styles */
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: rgb(0, 0, 255, 0.5);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* footer-container  */
+
+.footer-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  left: 20px;
+  position: fixed;
+  width: calc(100% - 40px);
+  bottom: 5px;
+  border-top: solid 1px rgb(160, 149, 149, 0.3);
+}
