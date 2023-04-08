@@ -40,7 +40,7 @@ export default function AddproductPage() {
           <button className="Nav-Save-Button">SAVE</button>
           <NavLink
             className="Nav-ADD-Product-button"
-            to="http://localhost:3000/"
+            to="https://testproject-frontend-production.up.railway.app/"
           >
             CANCEL
           </NavLink>
