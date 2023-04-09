@@ -197,7 +197,7 @@ export const AddProductAction = async ({ request }) => {
 
   try {
     const datas = await axios.post(
-      "https://test-project-api.000webhostapp.com/",
+      "https://test-project-api.000webhostapp.com/api/",
       {
         name: data.get("name"),
         sku: data.get("sku"),
@@ -225,7 +225,7 @@ export const AddProductAction = async ({ request }) => {
 // Products loader
 export const fetchProductsLoader = async ({ params }) => {
   const response = await axios.get(
-    "https://test-project-api.000webhostapp.com/"
+    "https://test-project-api.000webhostapp.com/api/"
   );
 
   // console.log(response);
