@@ -128,7 +128,7 @@ export default function AddproductPage() {
                     required
                   />
 
-                  <span>Length (CM)</span>
+                  <span>length (CM)</span>
                   <input
                     id="lenght"
                     className="drop-down-more-details-fields-elements-input"
