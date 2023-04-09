@@ -162,13 +162,13 @@ export default function AddproductPage() {
 
             {!skuChecking && (
               <button id="Save" className="Save">
-                SAVE
+                Save
               </button>
             )}
 
             {skuChecking && (
               <button id="Save" disabled className="Save">
-                SAVE
+                Save
               </button>
             )}
           </Form>
