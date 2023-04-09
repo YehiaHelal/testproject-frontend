@@ -2,6 +2,7 @@ import {
   Form,
   json,
   NavLink,
+  redirect,
   useActionData,
   useLoaderData,
   useNavigate,
@@ -17,6 +18,9 @@ export default function AddproductPage() {
   const allProducts = useLoaderData();
   const navTo = useNavigate();
 
+  console.log(data);
+  console.log(allProducts);
+
   const [selectValue, setSelectValue] = useState("");
   const [skuValue, setSkuValue] = useState(false);
 
@@ -26,7 +30,7 @@ export default function AddproductPage() {
 
   // to redirect After the Form Submit action is successful,  without error handling tho.
   useEffect(() => {
-    if (typeof data === "object") {
+    if (typeof data === 1) {
       navTo("/");
     }
   }, [data]);
@@ -177,17 +181,19 @@ export const AddProductAction = async ({ request }) => {
 
   // console.log(request);
 
-  // const item = {
-  //   name: data.get("name"),
-  //   sku: data.get("sku"),
-  //   price: data.get("price"),
-  //   typeswitcher: data.get("productType"),
-  //   size: data.get("size"),
-  //   height: data.get("height"),
-  //   width: data.get("width"),
-  //   length: data.get("length"),
-  //   weight: data.get("weight"),
-  // };
+  const item = {
+    name: data.get("name"),
+    sku: data.get("sku"),
+    price: data.get("price"),
+    typeswitcher: data.get("productType"),
+    size: data.get("size") === null ? 0 : data.get("size"),
+    height: data.get("height") === null ? 0 : data.get("height"),
+    width: data.get("width") === null ? 0 : data.get("width"),
+    length: data.get("length") === null ? 0 : data.get("length"),
+    weight: data.get("weight") === null ? 0 : data.get("weight"),
+  };
+
+  // console.log(item);
 
   // const submissionv2 = Object.keys(item).forEach((key) => {
   //   if (item[key] === null) {
@@ -195,31 +201,39 @@ export const AddProductAction = async ({ request }) => {
   //   }
   // });
 
-  try {
-    const datas = await axios.post(
-      "https://test-project-api.000webhostapp.com/api/",
-      {
-        name: data.get("name"),
-        sku: data.get("sku"),
-        price: data.get("price"),
-        typeswitcher: data.get("productType"),
-        size: data.get("size"),
-        height: data.get("height"),
-        width: data.get("width"),
-        length: data.get("length"),
-        weight: data.get("weight"),
-      }
-    );
+  // http://localhost/react/api/
 
-    // console.log(datas);
+  // https://test-project-api.000webhostapp.com/api/
 
-    return datas;
-  } catch (error) {
-    // console.log(error);
-    return error.response.data.error;
-  }
+  // http://localhost/react/api/index.php
 
-  return;
+  // try {
+  // const datas = await axios.post(
+  //   "https://test-project-api.000webhostapp.com/api/",
+  //   {
+  //     name: data.get("name"),
+  //     sku: data.get("sku"),
+  //     price: 850,
+  //     typeswitcher: data.get("productType"),
+  //     size: 20,
+  //     height: data.get("height") === null ? 0 : data.get("height"),
+  //     width: data.get("width") === null ? 0 : data.get("width"),
+  //     length: data.get("length") === null ? 0 : data.get("length"),
+  //     weight: data.get("weight") === null ? 0 : data.get("weight"),
+  //   }
+  // );
+  // return datas;
+  // } catch (error) {
+  //   // console.log(error);
+  //   return error.response.data.error;
+  // }
+
+  const datas = await fetch("https://test-project-api.000webhostapp.com/api/", {
+    method: "post",
+    body: JSON.stringify(item),
+  });
+
+  return redirect("/");
 };
 
 // Products loader

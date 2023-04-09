@@ -7,38 +7,54 @@ import Footer from "../../components/Footer";
 const Home = (props) => {
   // const { allItems, dispatcho } = useFetchItemsContext(); // for checking all the items fetched
   // const { items, dispatch } = useItemsCartContext(); // for adding items to the cart
-  const [fetchedProducts, setFetchedProducts] = useState();
+  const [fetchedProducts, setFetchedProducts] = useState([]);
   const [triggerDelete, setTriggerDelete] = useState(0);
 
   const [activeButton, setActiveButton] = useState();
   const [disableButton, setDisabledButton] = useState();
   const [activeButtonArray, setActiveButtonArray] = useState([]);
-  // https://test-project-api.000webhostapp.com/api/
-  // https://test-project-api.000webhostapp.com/api/api/
+
   // to handle the MASS DELETE action and sending the reques to the backend
+
   const handleMassDeleteButton = async () => {
     // fetch request and if ok the cookie will be removed
-    try {
-      const datas = await axios.delete(
-        "https://test-project-api.000webhostapp.com/api/",
-        {
-          data: activeButtonArray,
-        }
-      );
 
-      if (datas.status === 200) {
-        // console.log(datas);
-        // setActiveButtonArray([]);
-        // console.log(activeButtonArray);
-
-        setTriggerDelete((current) => (current += 1));
+    const datas = await fetch(
+      "https://test-project-api.000webhostapp.com/api/index - Copy.php",
+      {
+        method: "post",
+        body: JSON.stringify(activeButtonArray),
       }
+    );
 
-      return datas;
-    } catch (error) {
-      return error.response.data.error;
+    if (datas.status === 200) {
+      // console.log("we are good");
+      setTriggerDelete((current) => (current += 1));
     }
+
+    // console.log(datas);
   };
+
+  // try {
+  //   const datas = await axios.delete(
+  //     "https://test-project-api.000webhostapp.com/api/",
+  //     {
+  //       data: activeButtonArray,
+  //     }
+  //   );
+
+  // if (datas.status === 200) {
+  //   // console.log(datas);
+  //   // setActiveButtonArray([]);
+  //   // console.log(activeButtonArray);
+
+  // }
+
+  //     return datas;
+  //   } catch (error) {
+  //     return error.response.data.error;
+  //   }
+  // };
 
   // for fetching the items after MASS DELETE happen and refresh the state with the new data
   useEffect(() => {
