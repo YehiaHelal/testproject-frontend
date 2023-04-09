@@ -60,6 +60,7 @@ export default function AddproductPage() {
           <Form className="form-component" method="post" action="/addproduct">
             <span>SKU</span>
             <input
+              id="sku"
               type="text"
               name="sku"
               required
@@ -69,13 +70,14 @@ export default function AddproductPage() {
             />
 
             <span>Name</span>
-            <input type="text" name="name" required />
+            <input id="name" type="text" name="name" required />
 
             <span>Price($)</span>
-            <input type="number" name="price" required />
+            <input id="price" type="number" name="price" required />
 
             <div>Type Switcher</div>
             <select
+              id="productType"
               required
               className="form-drop-down-style"
               type="productType"
@@ -94,6 +96,7 @@ export default function AddproductPage() {
                 <div className="drop-down-more-details-fields-elements">
                   <span>Size (MB)</span>
                   <input
+                    id="size"
                     className="drop-down-more-details-fields-elements-input"
                     type="number"
                     name="size"
@@ -109,6 +112,7 @@ export default function AddproductPage() {
                 <div className="drop-down-more-details-fields-elements">
                   <span>Height (CM)</span>
                   <input
+                    id="height"
                     className="drop-down-more-details-fields-elements-input"
                     type="number"
                     name="height"
@@ -117,6 +121,7 @@ export default function AddproductPage() {
 
                   <span>Width (CM)</span>
                   <input
+                    id="width"
                     className="drop-down-more-details-fields-elements-input"
                     type="number"
                     name="width"
@@ -125,6 +130,7 @@ export default function AddproductPage() {
 
                   <span>Length (CM)</span>
                   <input
+                    id="lenght"
                     className="drop-down-more-details-fields-elements-input"
                     type="number"
                     name="length"
@@ -140,6 +146,7 @@ export default function AddproductPage() {
                 <div className="drop-down-more-details-fields-elements">
                   <span>Weight (KG)</span>
                   <input
+                    id="weight"
                     className="drop-down-more-details-fields-elements-input"
                     type="number"
                     name="weight"
