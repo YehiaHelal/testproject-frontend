@@ -89,11 +89,11 @@ body {
   /* margin-bottom: 0; */
 }
 
-.delete-button-each-item-select {
+.delete-checkbox {
   padding: 4px;
   align-self: start;
 }
-.delete-button-each-item-select:hover {
+.delete-checkbox:hover {
   cursor: pointer;
 }
 

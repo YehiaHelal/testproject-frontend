@@ -127,8 +127,8 @@ const Home = (props) => {
             return (
               <div className="each-product-box-style" key={product.id}>
                 <button
-                  id=".delete-checkbox"
-                  className="delete-button-each-item-select"
+                  id="delete-checkbox"
+                  className="delete-checkbox"
                   onClick={(e) => {
                     // console.log(product);
                     if (activeButtonArray.includes(product.id)) {
