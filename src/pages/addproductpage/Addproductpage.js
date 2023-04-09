@@ -161,13 +161,13 @@ export default function AddproductPage() {
             </div>
 
             {!skuChecking && (
-              <button id="Save" className="form-Save-button">
+              <button id="save" className="form-Save-button">
                 SAVE
               </button>
             )}
 
             {skuChecking && (
-              <button id="Save" disabled className="form-Save-button">
+              <button id="save" disabled className="form-Save-button">
                 SAVE
               </button>
             )}
