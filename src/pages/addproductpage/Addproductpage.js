@@ -160,17 +160,17 @@ export default function AddproductPage() {
               )}
             </div>
 
-            {!skuChecking && (
-              <button id="Save" className="Save">
-                SAVE
-              </button>
-            )}
+            {/* {!skuChecking && ( */}
+            <button id="Save" className="Save">
+              SAVE
+            </button>
+            {/* )} */}
 
-            {skuChecking && (
+            {/* {skuChecking && (
               <button id="Save" disabled className="Save">
                 SAVE
               </button>
-            )}
+            )} */}
           </Form>
           {/* {showPopup && (
             <p>Product was successfully added, redirecting in 1 second...</p>
