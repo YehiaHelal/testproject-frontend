@@ -125,7 +125,11 @@ const Home = (props) => {
         {fetchedProducts &&
           fetchedProducts.map((product) => {
             return (
-              <div className="each-product-box-style" key={product.id}>
+              <div
+                id="delete-checkbox"
+                className="each-product-box-style"
+                key={product.id}
+              >
                 <button
                   className="delete-checkbox"
                   onClick={(e) => {
