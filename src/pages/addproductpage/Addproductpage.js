@@ -130,7 +130,7 @@ export default function AddproductPage() {
 
                   <span>length (CM)</span>
                   <input
-                    id="lenght"
+                    id="length"
                     className="drop-down-more-details-fields-elements-input"
                     type="number"
                     name="length"
