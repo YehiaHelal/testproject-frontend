@@ -125,10 +125,14 @@ const Home = (props) => {
         {fetchedProducts &&
           fetchedProducts.map((product) => {
             return (
-              <div className="each-product-box-style" key={product.id}>
+              <div
+                id=".delete-checkbox"
+                className="each-product-box-style"
+                key={product.id}
+              >
                 <button
-                  id="delete-checkbox"
-                  className="delete-checkbox"
+                  id=".delete-checkbox"
+                  className=".delete-checkbox"
                   onClick={(e) => {
                     // console.log(product);
                     if (activeButtonArray.includes(product.id)) {
