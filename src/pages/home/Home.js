@@ -127,7 +127,7 @@ const Home = (props) => {
             return (
               <div className="each-product-box-style" key={product.id}>
                 <button
-                  delete-button-each-item-select
+                  id="delete-button-each-item-select"
                   className="delete-button-each-item-select"
                   onClick={(e) => {
                     // console.log(product);
