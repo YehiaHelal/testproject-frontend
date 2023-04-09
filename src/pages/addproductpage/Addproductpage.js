@@ -18,8 +18,8 @@ export default function AddproductPage() {
   const allProducts = useLoaderData();
   const navTo = useNavigate();
 
-  console.log(data);
-  console.log(allProducts);
+  // console.log(data);
+  // console.log(allProducts);
 
   const [selectValue, setSelectValue] = useState("");
   const [skuValue, setSkuValue] = useState(false);
