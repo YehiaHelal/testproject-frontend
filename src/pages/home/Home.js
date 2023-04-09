@@ -13,14 +13,18 @@ const Home = (props) => {
   const [activeButton, setActiveButton] = useState();
   const [disableButton, setDisabledButton] = useState();
   const [activeButtonArray, setActiveButtonArray] = useState([]);
-
+  // https://test-project-api.000webhostapp.com/
+  // https://test-project-api.000webhostapp.com/
   // to handle the MASS DELETE action and sending the reques to the backend
   const handleMassDeleteButton = async () => {
     // fetch request and if ok the cookie will be removed
     try {
-      const datas = await axios.delete("http://localhost/react/api/", {
-        data: activeButtonArray,
-      });
+      const datas = await axios.delete(
+        "https://test-project-api.000webhostapp.com/",
+        {
+          data: activeButtonArray,
+        }
+      );
 
       if (datas.status === 200) {
         // console.log(datas);
@@ -39,7 +43,9 @@ const Home = (props) => {
   // for fetching the items after MASS DELETE happen and refresh the state with the new data
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await axios.get("http://localhost/react/api/");
+      const response = await axios.get(
+        "https://test-project-api.000webhostapp.com/"
+      );
 
       // console.log(response);
       // console.log("we are fetching items now");

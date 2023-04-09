@@ -196,17 +196,20 @@ export const AddProductAction = async ({ request }) => {
   // });
 
   try {
-    const datas = await axios.post("http://localhost/react/api/", {
-      name: data.get("name"),
-      sku: data.get("sku"),
-      price: data.get("price"),
-      typeswitcher: data.get("productType"),
-      size: data.get("size"),
-      height: data.get("height"),
-      width: data.get("width"),
-      length: data.get("length"),
-      weight: data.get("weight"),
-    });
+    const datas = await axios.post(
+      "https://test-project-api.000webhostapp.com/",
+      {
+        name: data.get("name"),
+        sku: data.get("sku"),
+        price: data.get("price"),
+        typeswitcher: data.get("productType"),
+        size: data.get("size"),
+        height: data.get("height"),
+        width: data.get("width"),
+        length: data.get("length"),
+        weight: data.get("weight"),
+      }
+    );
 
     // console.log(datas);
 
@@ -221,7 +224,9 @@ export const AddProductAction = async ({ request }) => {
 
 // Products loader
 export const fetchProductsLoader = async ({ params }) => {
-  const response = await axios.get("http://localhost/react/api/");
+  const response = await axios.get(
+    "https://test-project-api.000webhostapp.com/"
+  );
 
   // console.log(response);
 
